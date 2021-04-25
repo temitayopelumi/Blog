@@ -1,8 +1,25 @@
-asgiref @ file:///tmp/build/80754af9/asgiref_1617740417847/work
-certifi==2020.12.5
-Django @ file:///tmp/build/80754af9/django_1617740316746/work
-gunicorn==20.1.0
-psycopg2 @ file:///C:/ci/psycopg2_1612298766762/work
-pytz @ file:///tmp/build/80754af9/pytz_1612215392582/work
-sqlparse @ file:///tmp/build/80754af9/sqlparse_1602184451250/work
-wincertstore==0.2
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: win-64
+asgiref=3.3.4
+ca-certificates=2021.4.13=haa95532_1
+certifi=2020.12.5
+django=3.2
+gunicorn=20.1.0
+krb5=1.17.1
+libpq=12.2
+
+pip=21.0.1
+psycopg2=2.8.6
+python=3.9.4
+pytz=2021.1
+setuptools=52.0.0
+sqlite=3.35.4
+sqlparse=0.4.1
+tk=8.6.10
+tzdata=2020f
+vc=14.2
+
+wheel=0.36.2
+wincertstore=0.2
+zlib=1.2.11
