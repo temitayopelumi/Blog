@@ -21,7 +21,7 @@ BASE_DIR = Path (__file__).resolve ().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['zuritraining-blog.herokuapp.com','127.0.0.1']
 
@@ -76,8 +76,9 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-SECRET_KEY = "django-insecure-nz=#ndgn^#9o=heot9bh&7-b7lnkx%7ea=!n^sp1w4h&88%=c="
-
+ 
+from boto.s3.connection import S3Connection
+SECRET_KEY = S3Connection(os.environ['SECRET_KEY'],)
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
