@@ -33,9 +33,10 @@ class BlogTests (TestCase):
         self.assertTemplateUsed (response, 'home.html')
 
     def test_post_detail_views (self):
-        response = self.client.get ('/post/1')
+        response = self.client.get ('/post/1/')
         no_response = self.client.get ('/post/10000000/')
         self.assertEqual (response.status_code, 200)
         self.assertEqual (no_response.status_code, 404)
         self.assertContains (response, 'A good title')
         self.assertTemplateUsed (response, 'post_detail.html')
+
